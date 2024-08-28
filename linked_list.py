@@ -13,6 +13,7 @@ class Node:
   def getNext(self,next):
     return self.next
 
+  
 #Define Singly linked list to create and initialise head variable
 
 class SLL():
@@ -54,8 +55,36 @@ class SLL():
     while temp is not None:
       print(temp.data,end=" ")
       temp = temp.next
+    print()  
  
+  def delete_first(self):
+    temp = self.head
+    self.head = temp.next
     
+  def delete_last(self):
+    temp = self.head
+    temp1 = temp.next
+    while temp1.next != None:
+      temp = temp.next
+    temp.next = None  
+      
+  def delete_item(self,item):
+    temp = self.head
+    temp1 = temp.next
+    while temp.next != None:
+      if temp1.data == item:
+        temp.next = temp1.next
+        return
+      temp = temp.next
+    else:
+      print("item not in list")  
+    
+
+
+
+
+
+
 #driver code
 my_list = SLL()
 my_list.insert_at_start(10)
@@ -63,7 +92,15 @@ my_list.insert_at_last(30)
 my_list.insert_after(my_list.search_ele(10),20)
 print(my_list.search_ele(20).data)
 my_list.print_list()
-       
+
+#check all methods:
+
+#my_list.delete_item(20)
+#my_list.delete_first()
+#my_list.print_list()
+#my_list.delete_last()
+#my_list.print_list()
+#my_list.print_list()       
     
   
     
