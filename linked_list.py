@@ -63,17 +63,17 @@ class SLL():
     
   def delete_last(self):
     temp = self.head
-    temp1 = temp.next
-    while temp1.next != None:
+    
+    while temp.next.next != None:
       temp = temp.next
     temp.next = None  
       
   def delete_item(self,item):
     temp = self.head
-    temp1 = temp.next
+    
     while temp.next != None:
-      if temp1.data == item:
-        temp.next = temp1.next
+      if temp.next.data == item:
+        temp.next = temp.next.next
         return
       temp = temp.next
     else:
