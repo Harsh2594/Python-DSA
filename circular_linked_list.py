@@ -112,7 +112,7 @@ class CLLIterator:
   def __next__(self):
     if self.current == None:
       raise StopIteration
-    if self.current == self.head and self.count==1:
+    if self.current == self.head and self.count == 1:
       raise StopIteration
     else:
       self.count = 1
@@ -140,7 +140,7 @@ my_list.print_list()
 #print(my_list.search_item(30))
 for x in my_list:
   print(x,end=" ")
-print()
+  print()
       
 
 
