@@ -24,7 +24,7 @@ class SLL():
     return self.head == None
       
   def insert_at_start(self,data):
-    my_node = Node(data)
+    my_node = Node(data,self.head)
     self.head = my_node
     
   def insert_at_last(self,data):
@@ -89,6 +89,7 @@ my_list.insert_at_start(10)
 my_list.insert_at_last(30)
 my_list.insert_after(my_list.search_ele(10),20)
 print(my_list.search_ele(20).data)
+my_list.insert_at_start(5)
 my_list.print_list()
 
 #check all methods:
